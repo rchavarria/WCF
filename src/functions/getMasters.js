@@ -4,6 +4,7 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 const tableName = process.env.mastersTable;
 
 module.exports.handler = async () => {
+  console.log(`Consultando la tabla: ${tableName}`);
   const count = 8;
 
   const req = {
